@@ -1,0 +1,59 @@
+# Project One Get-Item Pseudocode
+#
+START get_item
+
+    # The get-item process needs the current room, the item (if any) located
+    # in that room, and the player's inventory list.
+
+    # Prompt for and receive the player's get-item command.
+    OUTPUT "Enter your move: "
+    INPUT player_command
+
+    SET command_parts to player_command split by spaces
+    SET action to command_parts[0]
+    SET item_name to the remaining words in player_command joined back together
+
+    IF action is equal to "get" THEN
+
+        # Validate whether the requested item is available in the current room.
+        IF current_room has no item THEN
+            OUTPUT "Can't get " + item_name + "!"
+
+        ELSE IF item_name is equal to current_room's item THEN
+            # The request is valid: update the inventory and the room.
+            ADD item_name to inventory
+            REMOVE item_name from current_room
+            OUTPUT item_name + " retrieved!"
+
+        ELSE
+            # The item named isn't the one in this room.
+            OUTPUT "Can't get " + item_name + "!"
+        END IF
+
+    ELSE
+        # The command was not a recognized get-item command.
+        OUTPUT "Invalid Input!"
+    END IF
+
+    # Return to the larger gameplay loop by showing the player's updated
+    # status, the same way the move process does after every command.
+    OUTPUT "You are in the " + current_room
+    OUTPUT "Inventory: " + inventory
+
+    IF current_room has an item THEN
+        OUTPUT "You see a " + current_room's item
+    END IF
+
+    # Let the player know how close they are to finishing their search.
+    # Collecting all 6 items does not end the game by itself -- the player
+    # must then go confront the villain in the Reactor Room (handled in
+    # move.pseudo).
+    IF inventory contains all 6 required items THEN
+        OUTPUT "You've found all the evidence! Go confront Nadia in the Reactor Room."
+    ELSE
+        OUTPUT "You still need more evidence before you can confront the villain."
+    END IF
+
+END get_item
+
+# References

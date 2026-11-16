@@ -1,0 +1,67 @@
+# Project One Move-Between-Rooms Pseudocode
+
+
+START move
+
+    # The movement process needs the player's current room, the connections
+    # (exits) that room has to other rooms, the player's inventory, and the
+    # command the player types.
+    SET current_room to "Crew Quarters"
+    SET inventory to an empty list
+    SET game_over to false
+
+    WHILE game_over is false
+
+        # Prompt for and receive the player's movement command.
+        OUTPUT "Enter your move: "
+        INPUT player_command
+
+        SET command_parts to player_command split by spaces
+        SET action to command_parts[0]
+        SET direction to command_parts[1] (if present)
+
+        IF action is equal to "go" THEN
+
+            # Validate whether the requested movement is possible from the
+            # current room.
+            IF current_room has no exit for direction THEN
+                OUTPUT "You can't go that way!"
+
+            ELSE
+                # Movement is valid: update the room and show the result.
+                SET current_room to the room connected by direction from current_room
+
+                OUTPUT "You are in the " + current_room
+                OUTPUT "Inventory: " + inventory
+
+                IF current_room has an item THEN
+                    OUTPUT "You see a " + current_room's item
+                END IF
+
+                IF current_room is the villain room THEN
+                    OUTPUT "You see Nadia (Infected)"
+
+                    # Whether this is a win or a loss depends on whether the
+                    # player has already collected all 6 required items.
+                    IF inventory contains all 6 required items THEN
+                        OUTPUT "You confront her with the evidence...you win!"
+                        OUTPUT "Thanks for playing the game. Hope you enjoyed it."
+                    ELSE
+                        OUTPUT "She lunges at you...GAME OVER!"
+                        OUTPUT "Thanks for playing the game. Hope you enjoyed it."
+                    END IF
+
+                    SET game_over to true
+                END IF
+            END IF
+
+        ELSE
+            # The command was not a recognized movement command.
+            OUTPUT "Invalid Input!"
+        END IF
+
+    END WHILE
+
+END move
+
+# References

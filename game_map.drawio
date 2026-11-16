@@ -1,0 +1,91 @@
+<mxfile host="embed.diagrams.net" agent="IT140">
+  <diagram name="Game Map" id="gameMap1">
+    <mxGraphModel dx="893" dy="595" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bridge" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Bridge&#xa;Item: Stuffed Rabbit (Jess)" vertex="1">
+          <mxGeometry height="80" width="180" x="400" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="observation" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Observation Deck&#xa;Item: Old Film Camera (Devon)" vertex="1">
+          <mxGeometry height="80" width="180" x="120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="quarters" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Crew Quarters&#xa;(START - no item)" vertex="1">
+          <mxGeometry height="80" width="180" x="400" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="mess" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Mess Hall&#xa;Item: Harmonica (Player)" vertex="1">
+          <mxGeometry height="80" width="180" x="680" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="engine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Engine Room&#xa;Item: Potted Plant (Priya)" vertex="1">
+          <mxGeometry height="80" width="180" x="400" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="cargo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Cargo Bay&#xa;Item: Bloodstained Scarf (Nadia)" vertex="1">
+          <mxGeometry height="80" width="180" x="400" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="medbay" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Med Bay&#xa;Item: MP3 Player (Marcus)" vertex="1">
+          <mxGeometry height="80" width="180" x="680" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="reactor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Reactor Room&#xa;(VILLAIN - Nadia Infected - no item)" vertex="1">
+          <mxGeometry height="80" width="180" x="400" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="quarters" style="endArrow=block;html=1;exitX=0.5;exitY=0;entryX=0.3;entryY=1;" target="bridge" value="North">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="bridge" style="endArrow=block;html=1;exitX=0.7;exitY=1;entryX=0.5;entryY=0;" target="quarters" value="South">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="quarters" style="endArrow=block;html=1;exitX=0;exitY=0.3;entryX=1;entryY=0.5;" target="observation" value="West">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="observation" style="endArrow=block;html=1;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" target="quarters" value="East">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="quarters" style="endArrow=block;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" target="mess" value="East">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="mess" style="endArrow=block;html=1;exitX=0;exitY=0.7;entryX=1;entryY=0.5;" target="quarters" value="West">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="quarters" style="endArrow=block;html=1;exitX=0.3;exitY=1;entryX=0.5;entryY=0;" target="engine" value="South">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="engine" style="endArrow=block;html=1;exitX=0.7;exitY=0;entryX=0.5;entryY=1;" target="quarters" value="North">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="engine" style="endArrow=block;html=1;exitX=0.3;exitY=1;entryX=0.5;entryY=0;" target="cargo" value="South">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="cargo" style="endArrow=block;html=1;exitX=0.7;exitY=0;entryX=0.5;entryY=1;" target="engine" value="North">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="cargo" style="endArrow=block;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="reactor" value="South">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3EClo0HRQVcZq-MwLTdm-1" edge="1" parent="1" source="medbay" style="endArrow=classic;html=1;rounded=0;exitX=0.225;exitY=-0.03;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.214;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;" target="mess" value="North">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="510" as="sourcePoint" />
+            <mxPoint x="700" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3EClo0HRQVcZq-MwLTdm-2" edge="1" parent="1" source="mess" style="endArrow=classic;html=1;rounded=0;entryX=0.666;entryY=0.022;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.674;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;" target="medbay" value="South">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="530" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3EClo0HRQVcZq-MwLTdm-3" edge="1" parent="1" source="engine" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="medbay" value="East">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="530" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3EClo0HRQVcZq-MwLTdm-4" edge="1" parent="1" source="medbay" style="endArrow=classic;html=1;rounded=0;exitX=0.003;exitY=0.685;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.984;entryY=0.677;entryDx=0;entryDy=0;entryPerimeter=0;" target="engine" value="West">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="530" as="sourcePoint" />
+            <mxPoint x="740" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
